@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Module1 LunchCheck Angular</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="utf-8">
+  </head>
+
+
+
+  <body ng-app="LunchCheck">
+
+    <div class="container col-centered text-centered">
+      <h1>Lunch Check Module 1</h1>
+      <p>Please list lunch items that you tpyically eat at lunch seperated by commas so we can judge you</p>
+
+
+      <div ng-controller="LunchCheckController" class="row">
+        <div class="col-centered text-centered col-xs-4" id="messageBox">
+          {{message}}
+        </div>
+           <div class="form-group col-cs-10 col-centered" id="inputBar">
+             <input type="text"
+               class="form-control text-centered" ng-model="lunch"
+               placeholder="{{placeholder}}">
+           </div>
+
+           <div class="form-group row">
+             <div class="col-cs-10 col-centered text-centered">
+               <button class="btn btn-default" ng-click="checker()">{{button}}</button>
+           </div>
+
+     </div>
+
+
+  </body>
+</html>
